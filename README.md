@@ -40,7 +40,7 @@ This is a React Native mobile application that provides information about differ
 
 This code provides a functional React Native component that fetches and displays a list of countries, allows searching through them, and supports toggling between light and dark themes.
 
-```
+```TypeScript
 export default function HomeScreen() {
 	const [countries, setCountries] = useState<CountryType[] | null>(null);
 	const [loading, setLoading] = useState(false);
@@ -178,7 +178,7 @@ This component dynamically adjusts the appearance of the status bar and navigati
 
 This component effectively fetches and displays detailed information about a country, handling loading states and errors gracefully.
 
-```
+```TypeScript
 export const CountryDetailScreen = () => {
 	const [country, setCountry] = useState<CountryType | null>(null);
 	const [loading, setLoading] = useState(false);
@@ -269,7 +269,7 @@ export const CountryDetailScreen = () => {
 
 hese interfaces help ensure that objects conform to a specific structure, making the code more predictable and easier to work with.
 
-```
+```TypeScript
 export interface CountryType {
 	id: string;
 	name: {
@@ -296,7 +296,7 @@ export interface SectionType {
 
 This code defines a React Native component called CountryList that displays a list of countries using a FlatList component.
 
-```
+```TypeScript
 const CountryList = ({ countries }: { countries: CountryType[] }) => {
 	const colorScheme = useColorScheme();
 	const color = colorScheme === "dark" ? "white" : "black";
@@ -320,7 +320,7 @@ const CountryList = ({ countries }: { countries: CountryType[] }) => {
 
 This component is designed to display a country's name, flag, and capital in a styled, navigable list item.
 
-```
+```TypeScript
 const CountryItem = ({ country }: { country: CountryType }) => {
 	const colorScheme = useColorScheme();
 	const color = colorScheme === "dark" ? "white" : "purple";
@@ -349,7 +349,7 @@ const CountryItem = ({ country }: { country: CountryType }) => {
 
 This component is designed to show a loading spinner with a customizable text message. It adapts its colors based on the current color scheme (light or dark mode). The styles ensure that the content is centered both vertically and horizontally.
 
-```
+```TypeScript
 import {
 	ActivityIndicator,
 	StyleSheet,
@@ -390,7 +390,7 @@ export default Loader;
 
 This component is designed to display a section of country information with adaptive styling based on the device's color scheme.
 
-```
+```TypeScript
 const CountryInfoSection = ({ section }: { section: SectionType }) => {
 	const colorScheme = useColorScheme();
 
@@ -434,7 +434,7 @@ export default CountryInfoSection;
 
 This component displays a "Not Found" screen with a title and a link that navigates back to the home screen. The styles ensure the link is centered on the screen with a specific appearance.
 
-```
+```TypeScript
 import { View, StyleSheet } from "react-native";
 import { Link, Stack } from "expo-router";
 import React from "react";
