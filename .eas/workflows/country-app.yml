@@ -1,0 +1,9 @@
+name: country-app
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    steps:
+      -run: eas build --platform android

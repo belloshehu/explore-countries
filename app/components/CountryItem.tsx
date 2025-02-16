@@ -54,6 +54,8 @@ const styles = StyleSheet.create({
 	textWrapper: {
 		height: 50,
 		paddingHorizontal: 10,
+		alignItems: "flex-start",
+		justifyContent: "center",
 	},
 });
 
