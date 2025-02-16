@@ -12,7 +12,11 @@ import { CountryType } from "./types/country.types";
 import CountryList from "./components/CountryList";
 import Loader from "./components/loader";
 import React from "react";
-import { AntDesign, MaterialCommunityIcons } from "@expo/vector-icons";
+import {
+	AntDesign,
+	MaterialCommunityIcons,
+	MaterialIcons,
+} from "@expo/vector-icons";
 
 export default function HomeScreen() {
 	const [countries, setCountries] = useState<CountryType[] | null>(null);
@@ -104,13 +108,21 @@ export default function HomeScreen() {
 				<Text style={[styles.title, { color }]}>
 					Visit ({filteredCountries?.length}) countries
 				</Text>
-				<TouchableOpacity onPress={toggleColorScheme}>
-					<MaterialCommunityIcons
-						name="theme-light-dark"
+				{colorScheme === "dark" ? (
+					<MaterialIcons
+						name="light-mode"
 						size={24}
-						color={colorScheme === "dark" ? "white" : "purple"}
+						color="white"
+						onPress={toggleColorScheme}
 					/>
-				</TouchableOpacity>
+				) : (
+					<MaterialIcons
+						name="dark-mode"
+						size={24}
+						color="purple"
+						onPress={toggleColorScheme}
+					/>
+				)}
 			</View>
 			<View style={styles.searchBar}>
 				<AntDesign

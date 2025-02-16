@@ -49,6 +49,13 @@
       "eas": {
         "projectId": "ac744cac-4b7c-4afc-97a0-4eb315c00706"
       }
+    },
+    "owner": "ardesp",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/ac744cac-4b7c-4afc-97a0-4eb315c00706"
     }
   }
 }
